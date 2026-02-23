@@ -5,6 +5,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
@@ -91,9 +92,29 @@ public class App extends Application {
         // Footer
         Label footer = new Label("Needleman-Wunsch\nGlobal Alignment");
         footer.getStyleClass().add("sidebar-footer");
+        footer.setMaxWidth(Double.MAX_VALUE);
+
+        // Developer tag
+        Label devTag = new Label("Dev – Marcel Ndrecaj");
+        devTag.getStyleClass().add("dev-tag");
+        devTag.setMaxWidth(Double.MAX_VALUE);
+
+        // Links
+        Hyperlink ghLink = new Hyperlink("GitHub");
+        ghLink.getStyleClass().add("sidebar-link");
+        ghLink.setOnAction(e -> getHostServices().showDocument("https://github.com/MarcelNd/Needleman-Wunsch-Impl"));
+
+        Hyperlink licenseLink = new Hyperlink("MIT License");
+        licenseLink.getStyleClass().add("sidebar-link");
+        licenseLink.setOnAction(e -> getHostServices()
+                .showDocument("https://github.com/MarcelNd/Needleman-Wunsch-Impl/blob/main/LICENSE"));
+
+        HBox linksBox = new HBox(8, ghLink, licenseLink);
+        linksBox.setAlignment(Pos.CENTER);
+        linksBox.setPadding(new Insets(0, 16, 12, 16));
 
         VBox sidebar = new VBox();
-        sidebar.getChildren().addAll(logoBox, navButtons, spacer, footer);
+        sidebar.getChildren().addAll(logoBox, navButtons, spacer, footer, devTag, linksBox);
         sidebar.getStyleClass().add("sidebar");
         sidebar.setPrefWidth(220);
         sidebar.setMinWidth(220);

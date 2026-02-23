@@ -18,7 +18,7 @@
     -fx-background-color: linear-gradient(to bottom, #161b22, #0d1117);
     -fx-border-color: #21262d;
     -fx-border-width: 0 1 0 0;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 2, 0);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 2, 0);
 }
 
 .sidebar-logo {
@@ -41,8 +41,31 @@
 .sidebar-footer {
     -fx-font-size: 10px;
     -fx-text-fill: #484f58;
-    -fx-padding: 16;
+    -fx-padding: 12 16 4 16;
     -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.dev-tag {
+    -fx-font-size: 9px;
+    -fx-font-family: "Menlo", "Monaco", "Consolas", monospace;
+    -fx-text-fill: #30363d;
+    -fx-padding: 4 16 8 16;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-border-color: #21262d;
+    -fx-border-width: 1 0 0 0;
+}
+
+.sidebar-link {
+    -fx-font-size: 10px;
+    -fx-text-fill: #484f58;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.sidebar-link:hover {
+    -fx-text-fill: #58a6ff;
 }
 
 /* --- Navigation Buttons --- */
@@ -76,7 +99,9 @@
 }
 
 /* --- Scroll Panes --- */
-.overview-scroll, .alignment-scroll, .result-scroll {
+.overview-scroll,
+.alignment-scroll,
+.result-scroll {
     -fx-background-color: #0d1117;
     -fx-background: #0d1117;
 }
@@ -266,12 +291,29 @@
     -fx-text-fill: #c9d1d9;
 }
 
-.base-a { -fx-text-fill: #63b3ed; }
-.base-t { -fx-text-fill: #fc8181; }
-.base-g { -fx-text-fill: #68d391; }
-.base-c { -fx-text-fill: #f6e05e; }
-.base-u { -fx-text-fill: #d6bcfa; }
-.gap-char { -fx-text-fill: #484f58; }
+.base-a {
+    -fx-text-fill: #63b3ed;
+}
+
+.base-t {
+    -fx-text-fill: #fc8181;
+}
+
+.base-g {
+    -fx-text-fill: #68d391;
+}
+
+.base-c {
+    -fx-text-fill: #f6e05e;
+}
+
+.base-u {
+    -fx-text-fill: #d6bcfa;
+}
+
+.gap-char {
+    -fx-text-fill: #484f58;
+}
 
 .match-indicator {
     -fx-text-fill: #38a169;
@@ -489,12 +531,29 @@
     -fx-font-weight: bold;
 }
 
-.stat-score     { -fx-text-fill: #58a6ff; }
-.stat-identity  { -fx-text-fill: #38a169; }
-.stat-matches   { -fx-text-fill: #7ee787; }
-.stat-mismatches { -fx-text-fill: #f97583; }
-.stat-gaps      { -fx-text-fill: #d2a8ff; }
-.stat-length    { -fx-text-fill: #79c0ff; }
+.stat-score {
+    -fx-text-fill: #58a6ff;
+}
+
+.stat-identity {
+    -fx-text-fill: #38a169;
+}
+
+.stat-matches {
+    -fx-text-fill: #7ee787;
+}
+
+.stat-mismatches {
+    -fx-text-fill: #f97583;
+}
+
+.stat-gaps {
+    -fx-text-fill: #d2a8ff;
+}
+
+.stat-length {
+    -fx-text-fill: #79c0ff;
+}
 
 .stat-label {
     -fx-font-size: 11px;
