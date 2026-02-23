@@ -107,7 +107,7 @@ public class App extends Application {
         Hyperlink licenseLink = new Hyperlink("MIT License");
         licenseLink.getStyleClass().add("sidebar-link");
         licenseLink.setOnAction(e -> getHostServices()
-                .showDocument("https://github.com/MarcelNd/Needleman-Wunsch-Impl/blob/main/LICENSE"));
+                .showDocument("https://github.com/MarcelNd/Needleman-Wunsch-Impl/blob/master/LICENSE"));
 
         HBox linksBox = new HBox(8, ghLink, licenseLink);
         linksBox.setAlignment(Pos.CENTER);
